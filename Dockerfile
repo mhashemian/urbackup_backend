@@ -1,9 +1,9 @@
 FROM ubuntu
 
 RUN apt update -y && DEBIAN_FRONTEND=noninteractive apt install -y gcc g++ make git
-RUN git clone https://github.com/uroni/urbackup_backend
-WORKDIR urbackup_backend
-RUN ./switch_build.sh server
-RUN autoreconf --install
-RUN ./configure
-RUN make -j8
+#RUN git clone https://github.com/uroni/urbackup_backend
+#WORKDIR urbackup_backend
+#RUN ./switch_build.sh server
+#RUN autoreconf --install
+#RUN ./configure
+#RUN make -j8
