@@ -2,7 +2,7 @@ FROM ubuntu
 
 RUN apt clean
 #RUN apt update -y && DEBIAN_FRONTEND=noninteractive apt-get install -y gcc g++ make git autoconf
-
+RUN apt update -y && DEBIAN_FRONTEND=noninteractive apt-get install -y add-apt-repository
 RUN add-apt-repository ppa:uroni/urbackup
 RUN apt update
 RUN apt install urbackup-server
