@@ -1,9 +1,9 @@
 FROM ubuntu
 
-RUN lsb_release -a
 RUN apt clean
 #RUN apt update -y && DEBIAN_FRONTEND=noninteractive apt-get install -y gcc g++ make git autoconf
-RUN apt update -y && DEBIAN_FRONTEND=noninteractive apt-get install -y software-properties-common
+RUN apt update -y && DEBIAN_FRONTEND=noninteractive apt-get install -y software-properties-common lsb_release
+RUN lsb_release -a
 RUN add-apt-repository ppa:uroni/urbackup
 RUN apt update
 RUN apt install urbackup-server
