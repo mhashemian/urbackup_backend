@@ -6,7 +6,7 @@ RUN git clone https://github.com/uroni/urbackup_backend
 WORKDIR urbackup_backend
 RUN ./switch_build.sh server
 #RUN autoupdate
-RUN autoconf
+RUN autoconf --install
 #RUN autoreconf --install
 RUN ./configure
 RUN make -j8
