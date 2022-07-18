@@ -5,8 +5,7 @@ RUN apt update -y && DEBIAN_FRONTEND=noninteractive apt-get install -y gcc g++ m
 RUN git clone https://github.com/uroni/urbackup_backend
 WORKDIR urbackup_backend
 RUN ./switch_build.sh server
-RUN rm -rf m4
-RUN mkdir m4
+RUN aclocal --install
 RUN autoreconf --install
 RUN ./configure
 RUN make -j8
