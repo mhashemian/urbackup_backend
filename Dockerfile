@@ -1,7 +1,7 @@
 FROM ubuntu
 
 RUN apt clean
-RUN apt update -y && DEBIAN_FRONTEND=noninteractive apt-get install -y gcc g++ make git autoconf libtool
+RUN apt update -y && DEBIAN_FRONTEND=noninteractive apt-get install -y gcc g++ make git autoconf libtool pkg-config
 
 #RUN apt update -y && DEBIAN_FRONTEND=noninteractive apt-get install -y software-properties-common
 #RUN echo 'deb http://download.opensuse.org/repositories/home:/uroni/xUbuntu_22.04/ /' | tee /etc/apt/sources.list.d/home:uroni.list
@@ -16,6 +16,7 @@ RUN apt update -y && DEBIAN_FRONTEND=noninteractive apt-get install -y gcc g++ m
 RUN git clone https://github.com/uroni/urbackup_backend
 WORKDIR urbackup_backend
 RUN ./switch_build.sh server
+RUN autoupdate
 #RUN autoreconf --install
 #RUN ./configure
 #RUN make -j8
