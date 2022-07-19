@@ -1,7 +1,7 @@
 FROM ubuntu
 
 RUN apt clean
-RUN apt update -y && DEBIAN_FRONTEND=noninteractive apt-get install -y gcc g++ make git autoconf libssl-dev zlib1g-dev libcurl-dev libtool pkg-config
+RUN apt update -y && DEBIAN_FRONTEND=noninteractive apt-get install -y gcc g++ make git autoconf libssl-dev zlib1g-dev curl libtool pkg-config
 
 #RUN apt update -y && DEBIAN_FRONTEND=noninteractive apt-get install -y software-properties-common
 #RUN echo 'deb http://download.opensuse.org/repositories/home:/uroni/xUbuntu_22.04/ /' | tee /etc/apt/sources.list.d/home:uroni.list
