@@ -390,6 +390,7 @@ void detach_other_dbs(IDatabase* db)
 
 DLLEXPORT void LoadActions(IServer* pServer)
 {
+	return;
 	Server=pServer;
 
 	/*if(!testEscape())
